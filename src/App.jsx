@@ -40,7 +40,14 @@ function App() {
 
   return (
     <>
-      
+      <div className='gameInfo'>
+        <div className='gameTitle'>Pokeman Memory Card</div>
+        <div className='gameResult'></div>
+        <div className='scoreBoard'>
+          <div className='currScore'>Score: </div>
+          <div className='bestScore'>Best Score: </div>
+        </div>
+      </div>
       <div className='allCardsContainer'>
         {
           cards.map(card => {
