@@ -51,11 +51,31 @@ html, body{
 #root {
   width: 100%;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .gameInfo {
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
+  gap: 20px;
+}
+.gameInfo > div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gameTitle {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.gameResult,
+.scoreBoard {
+  font-size: 30px;
 }
 
 .allCardsContainer {
@@ -72,6 +92,7 @@ html, body{
   flex-direction: column;
   align-items: center;
   border: 2px solid black;
+  
 }
 
 .pokemanName {
