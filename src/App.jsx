@@ -66,12 +66,12 @@ function App() {
   function handleClick(e) {
     //if the game is over, new clicks wont do anything
     const gameResult = document.querySelector('.gameResult')
-    if (clickedCards.size === 12 || gameResult.innerHTML === 'Game over!') {
+    if (clickedCards.size === 12 || gameResult.innerHTML === 'Game Over!') {
       return;
     }
     //check if this card has been clicked before and update score and best score
     if (!clickedCards.has(e.target.className)) {
-      gameResult.innerHTML = ''
+      //gameResult.innerHTML = ''
       clickedCards.add(e.target.className)
       if (clickedCards.size === 12) {
         gameResult.innerHTML = 'You win!'
@@ -92,6 +92,7 @@ function App() {
   function handleNewRound() {
     setCurrScore(0)
     setClickedCards(new Set())
+    document.querySelector('.gameResult').innerHTML = 'Start clicking! Just do not click the same Pokeman twice!'
   }
    
 
